@@ -1,1 +1,1 @@
-# MicrosoftRewardsBingSearchPoints
+# MicrosoftRewardsBingSearchPointsCollectionTool
