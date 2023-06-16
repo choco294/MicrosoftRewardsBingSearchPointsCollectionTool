@@ -74,9 +74,12 @@ ECHO ****************************************************
 ECHO * Finalize Process
 ECHO ****************************************************
 TASKKILL /IM msedge.exe /F > NUL 2>&1
+ECHO %DATE% %TIME% : Starting Microsoft Edge's processes(--no-startup-window).
 START "" msedge.exe --no-startup-window --win-session-start /prefetch:5
-START "" msedge.exe --window-size=1000,600
+ECHO %DATE% %TIME% : Wait 3 seconds...
+TIMEOUT /NOBREAK 3 > NUL
 ECHO %DATE% %TIME% : Starting Microsoft Edge's processes.
+START "" msedge.exe --window-size=1000,600
 ECHO %DATE% %TIME% : Wait 3 seconds...
 TIMEOUT /NOBREAK 3 > NUL
 
