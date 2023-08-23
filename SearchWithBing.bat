@@ -1,6 +1,8 @@
 @ECHO OFF
 SETLOCAL ENABLEDELAYEDEXPANSION
 
+SET WORD=accommodate accounting actually additional administration advance advertising afford analyst annual appear applicant appreciate architect assess attend attract benefit budget cater colleague compare complicated concern conference consumer contract current decide delay delighted department designate develop donate eliminate encourage enroll estate exceed
+
 ECHO ****************************************************
 ECHO * Initialize Process
 ECHO ****************************************************
@@ -12,21 +14,20 @@ TIMEOUT /NOBREAK 3 > NUL
 ECHO ****************************************************
 ECHO * Search with Bing by PC User Agent
 ECHO ****************************************************
-SET WORD_PC=accommodate accounting actually additional administration advance advertising afford analyst annual appear applicant appreciate architect assess attend attract benefit budget cater colleague compare complicated concern conference consumer contract current decide delay delighted department designate develop donate eliminate encourage enroll estate exceed
 SET CNT_PC=0
 
-FOR %%a IN (%WORD_PC%) DO (
-  SET %!%WORD_PC[!CNT_PC!]%!%=%%a
+FOR %%a IN (%WORD%) DO (
+  SET %!%WORD[!CNT_PC!]%!%=%%a
   SET /A CNT_PC+=1
 )
 
 SET /A CNT_PC-=1
 FOR /L %%I in (0,1,%CNT_PC%) DO (
   TIMEOUT /NOBREAK 1 > NUL
-  @REM ECHO %!%WORD_PC[%%I]%!%=!WORD_PC[%%I]!
-  @REM ECHO [%%I]!WORD_PC[%%I]!
-  ECHO !DATE! !TIME! : Searching for !WORD_PC[%%I]!
-  START "" msedge.exe https://www.bing.com/search?q=!WORD_PC[%%I]!
+  @REM ECHO %!%WORD[%%I]%!%=!WORD[%%I]!
+  @REM ECHO [%%I]!WORD[%%I]!
+  ECHO !DATE! !TIME! : Searching for !WORD[%%I]!
+  START "" msedge.exe https://www.bing.com/search?q=!WORD[%%I]!
 )
 
 ECHO %DATE% %TIME% : Waiting for Bing searches to be completed.
@@ -49,21 +50,20 @@ TIMEOUT /NOBREAK 3 > NUL
 ECHO ****************************************************
 ECHO * Search with Bing by Mobile User Agent
 ECHO ****************************************************
-SET WORD_MOBILE=acquisition admit agenda allocate annex appliance appropriately approximately aspect auditorium bid brochure candidate cardboard checkup commend component conduct cuisine deficit demand designate discard durable eligible embarrassing enthusiastic exclusive expedite expire
 SET CNT_MOBILE=0
 
-FOR %%a IN (%WORD_MOBILE%) DO (
-  SET %!%WORD_MOBILE[!CNT_MOBILE!]%!%=%%a
+FOR %%a IN (%WORD%) DO (
+  SET %!%WORD[!CNT_MOBILE!]%!%=%%a
   SET /A CNT_MOBILE+=1
 )
 
 SET /A CNT_MOBILE-=1
 FOR /L %%I in (0,1,%CNT_MOBILE%) DO (
   TIMEOUT /NOBREAK 1 > NUL
-  @REM ECHO %!%WORD_MOBILE[%%I]%!%=!WORD_MOBILE[%%I]!
-  @REM ECHO [%%I]!WORD_MOBILE[%%I]!
-  ECHO !DATE! !TIME! : Searching for !WORD_MOBILE[%%I]!
-  START "" msedge.exe https://www.bing.com/search?q=!WORD_MOBILE[%%I]!
+  @REM ECHO %!%WORD[%%I]%!%=!WORD[%%I]!
+  @REM ECHO [%%I]!WORD[%%I]!
+  ECHO !DATE! !TIME! : Searching for !WORD[%%I]!
+  START "" msedge.exe https://www.bing.com/search?q=!WORD[%%I]!
 )
 
 ECHO %DATE% %TIME% : Waiting for Bing searches to be completed.
