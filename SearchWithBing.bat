@@ -27,7 +27,7 @@ FOR /L %%I in (0,1,%CNT_PC%) DO (
   @REM ECHO %!%WORD[%%I]%!%=!WORD[%%I]!
   @REM ECHO [%%I]!WORD[%%I]!
   ECHO !DATE! !TIME! : Searching for !WORD[%%I]!
-  START "" msedge.exe https://www.bing.com/search?q=!WORD[%%I]!
+  START "" msedge.exe https://www.bing.com/search?q=!WORD[%%I]!+^&qs=n^&form=QBRE^&sp=-1^&lq=0^&pq=^&sc=0-0^&sk=^&cvid=H7L7C41D09MZ4DS3G2BA0X9KWM85VNFI^&ghsh=0^&ghacc=0^&ghpl=
 )
 
 ECHO %DATE% %TIME% : Waiting for Bing searches to be completed.
@@ -63,7 +63,7 @@ FOR /L %%I in (0,1,%CNT_MOBILE%) DO (
   @REM ECHO %!%WORD[%%I]%!%=!WORD[%%I]!
   @REM ECHO [%%I]!WORD[%%I]!
   ECHO !DATE! !TIME! : Searching for !WORD[%%I]!
-  START "" msedge.exe https://www.bing.com/search?q=!WORD[%%I]!
+  START "" msedge.exe https://www.bing.com/search?q=!WORD[%%I]!+^&qs=n^&form=QBRE
 )
 
 ECHO %DATE% %TIME% : Waiting for Bing searches to be completed.
