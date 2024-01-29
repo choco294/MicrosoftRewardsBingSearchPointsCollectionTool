@@ -1,6 +1,10 @@
 @ECHO OFF
 SETLOCAL ENABLEDELAYEDEXPANSION
 
+ECHO アーカイブ用に残しているだけですので、使用しないでください。
+PAUSE > nul
+EXIT /B
+
 SET WORD=accommodate accounting actually additional administration advance advertising afford analyst annual appear applicant appreciate architect assess attend attract benefit budget cater colleague compare complicated concern conference consumer contract current decide delay delighted department designate develop donate eliminate encourage enroll estate exceed
 
 ECHO ****************************************************
@@ -27,7 +31,7 @@ FOR /L %%I in (0,1,%CNT_PC%) DO (
   @REM ECHO %!%WORD[%%I]%!%=!WORD[%%I]!
   @REM ECHO [%%I]!WORD[%%I]!
   ECHO !DATE! !TIME! : Searching for !WORD[%%I]!
-  START "" msedge.exe https://www.bing.com/search?q=!WORD[%%I]!+^&qs=n^&form=QBRE^&sp=-1^&lq=0^&pq=^&sc=0-0^&sk=^&cvid=H7L7C41D09MZ4DS3G2BA0X9KWM85VNFI^&ghsh=0^&ghacc=0^&ghpl=
+  START "" msedge.exe https://www.bing.com/search?q=!WORD[%%I]!^&qs=n^&form=QBRE^&sp=-1^&ghc=1^&lq=0^&pq=!WORD[%%I]!^&sc=11-4^&sk=^&cvid=C9DAAFE5BF104B4A94198111D7754C41^&ghsh=0^&ghacc=0^&ghpl=
 )
 
 ECHO %DATE% %TIME% : Waiting for Bing searches to be completed.
@@ -63,7 +67,7 @@ FOR /L %%I in (0,1,%CNT_MOBILE%) DO (
   @REM ECHO %!%WORD[%%I]%!%=!WORD[%%I]!
   @REM ECHO [%%I]!WORD[%%I]!
   ECHO !DATE! !TIME! : Searching for !WORD[%%I]!
-  START "" msedge.exe https://www.bing.com/search?q=!WORD[%%I]!+^&qs=n^&form=QBRE
+  START "" msedge.exe https://www.bing.com/search?q=!WORD[%%I]!+^&qs=n^&form=QBRE^&sp=-1^&lq=0^&pq=^&sc=0-0^&sk=^&cvid=H7L7C41D09MZ4DS3G2BA0X9KWM85VNFI^&ghsh=0^&ghacc=0^&ghpl=
 )
 
 ECHO %DATE% %TIME% : Waiting for Bing searches to be completed.
